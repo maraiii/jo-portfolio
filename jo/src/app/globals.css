@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 2.5em;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.hero {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+}
+
+.hero h1 {
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.hero,
+.intro,
+.outro {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+}
+
+.intro,
+.outro {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.intro h1,
+.outro h1 {
+  margin-bottom: 0;
+}
+
+.card {
+  position: relative;
+  height: 100vh;
+}
+
+.card-inner {
+  position: relative;
+  will-change: transform;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  display: flex;
+  gap: 4em;
+}
+
+.card-content {
+  flex: 3;
+}
+
+.card-video {
+  flex: 1;
+  aspect-ratio: 16/9;
+  border-radius: 0.75;
+  overflow: hidden;
+}
+
+.outro {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.outro button {
+  margin-top: 6rem;
+}
+.outro a {
+  text-decoration: none;
+}
+/* From Uiverse.io by barisdogansutcu */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #7e97b8;
+  background-color: #e0e8ef;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: rgba(255, 255, 255, 0.333);
+  border-radius: 40px 40px 40px 40px;
+  padding: 16px 24px 16px 28px;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.2s;
+  box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+}
+
+button:hover {
+  color: #516d91;
+  background-color: #e5edf5;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+}
+
+button:active {
+  box-shadow: none;
+}
+
+#card-1 .card-inner {
+  background-color: #8cbdf8;
+}
+
+#card-2 .card-inner {
+  background-color: antiquewhite;
+}
+
+#card-3 .card-inner {
+  background-color: #8d7cee;
+}
+
+#card-4 .card-inner {
+  background-color: cornflowerblue;
+}
+
+#card-5 .card-inner {
+  background-color: hotpink;
+}
+#card-6 .card-inner {
+  background-color: crimson;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    margin-bottom: 4rem;
+  }
+
+  .card {
+    height: 500px;
+    flex-direction: column;
+    display: flex;
+  }
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .card h1 {
+    font-size: 2.9rem;
+  }
+}
