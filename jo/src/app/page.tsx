@@ -109,6 +109,7 @@ export default function Home() {
 
   const container = useRef<HTMLDivElement | null>(null);
   const textRef = useRef<HTMLHeadingElement | null>(null);
+  const heroRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
@@ -146,6 +147,20 @@ export default function Home() {
   );
 
   useEffect(() => {
+    // Animação para o fundo da página
+    if (heroRef.current) {
+      gsap.fromTo(
+        heroRef.current,
+        { opacity: 0, backgroundColor: "#fff" },
+        {
+          opacity: 1,
+          backgroundColor: "#000",
+          duration: 2,
+          ease: "power3.out",
+        }
+      );
+    }
+
     if (textRef.current) {
       const words = textRef.current.querySelectorAll("span");
       gsap.fromTo(
@@ -167,11 +182,10 @@ export default function Home() {
     { text: "Illuminate.", color: "#8cbdf8" },
     { text: "Transform.", color: "#8d7cee" },
   ];
-
   return (
     <ReactLenis root>
       <div className="app" ref={container}>
-        <section className="hero">
+        <section className="hero" ref={heroRef}>
           <h1 ref={textRef}>
             {sentence.map((word, index) => (
               <span
